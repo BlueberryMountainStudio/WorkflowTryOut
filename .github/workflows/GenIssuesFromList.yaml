@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       issues: write
-    if: contains(github.event.issue.*.name, 'bug')
+    if: contains(github.event.issue.label.*.name, 'bug')
     steps:
        - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
        - run: ls ${{ github.workspace }}
