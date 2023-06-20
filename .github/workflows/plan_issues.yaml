@@ -1,7 +1,7 @@
 name: Weekly Team Sync
 on:
   schedule:
-    - cron: 20 07 * * 1
+    - cron: 00 12 * * 2
 
 jobs:
   create_issue:
@@ -13,8 +13,8 @@ jobs:
       - name: Create team sync issue
         uses: imjohnbo/issue-bot@3d96848fb5e9a4a473bb81ae62b4b4866a56e93a
         with:
-          assignees: "monalisa, doctocat, hubot"
-          labels: "weekly sync, docs-team"
+          assignees: "MarkusSchramm"
+          labels: "bug"
           title: "Team sync"
           body: |
             ### Agenda
@@ -28,7 +28,7 @@ jobs:
             Add things to discuss below
 
             - [Work this week](https://github.com/users/BlueberryMountainStudio/projects/3)
-          pinned: false
+          pinned: true
           close-previous: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
