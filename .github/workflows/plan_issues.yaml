@@ -1,7 +1,7 @@
 name: Weekly Team Sync
 on:
   schedule:
-    - cron: 00 12 * * 2
+    - cron: 00 14 * * 2
 
 jobs:
   create_issue:
@@ -31,4 +31,4 @@ jobs:
           pinned: true
           close-previous: false
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
