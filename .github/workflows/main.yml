@@ -1,0 +1,20 @@
+name: Add Issue To Backlog
+on:
+  issues:
+    	types:
+        -labeled
+
+jobs:
+  move-to-backlog:
+    if: github.event.label.name == 'New Task'
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - uses: actions/add-to-project@RELEASE_VERSION
+        with:
+          # You can target a project in a different organization
+          # to the issue
+          project-url: https://github.com/BlueberryMountainStudio/WorkflowTryOut/projects?query=is%3Aopen
+          github-token: ${{ secrets.WORKFLOW_TOKEN }}
+          labeled: bug
