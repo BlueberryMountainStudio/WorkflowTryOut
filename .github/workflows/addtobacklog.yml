@@ -17,3 +17,4 @@ jobs:
           # to the issue
           project-url: https://github.com/users/BlueberryMountainStudio/projects/9
           github-token: ${{ secrets.WORKFLOW_TOKEN }}
+          labeled: New Task
