@@ -1,12 +1,15 @@
 name: Comment Issue
-
 on:
   issues:
-    types: [opened, reopened]
+    types: 
+      - reopened
+      - opened
 
 jobs:
-  comment-issue:
+  comment:
     runs-on: ubuntu-latest
+    permissions:
+     issues: write
     steps:
       - uses: actions/github-script@v6
         with:
