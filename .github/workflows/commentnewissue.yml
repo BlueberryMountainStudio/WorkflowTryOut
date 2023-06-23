@@ -5,7 +5,7 @@ on:
     types: [opened, reopened]
 
 jobs:
-  comment:
+  comment-issue:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/github-script@v6
