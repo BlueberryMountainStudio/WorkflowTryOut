@@ -1,8 +1,8 @@
 name: Add Issue To Backlog
 on:
   issues:
-    	types:
-        -labeled
+    types:
+      -labeled
 
 jobs:
   move-to-backlog:
