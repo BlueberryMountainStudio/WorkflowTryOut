@@ -1,5 +1,6 @@
 name: Add Issue To Backlog
 on:
+  workflow_dispatch:
   issues:
     types:
       -labeled
