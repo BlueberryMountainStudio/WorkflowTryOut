@@ -1,10 +1,8 @@
 name: Add Issue To Backlog
 on:
-  workflow_dispatch:
   issues:
     types:
-      -labeled
-
+      -opened
 jobs:
   move-backlog:
     runs-on: ubuntu-latest
@@ -17,4 +15,4 @@ jobs:
           # to the issue
           project-url: https://github.com/users/BlueberryMountainStudio/projects/9
           github-token: ${{ secrets.WORKFLOW_TOKEN }}
-          labeled: good-new-issue
+          labeled: new-task
