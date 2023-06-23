@@ -5,7 +5,7 @@ on:
       -labeled
 
 jobs:
-  move-to-backlog:
+  move-backlog:
     if: github.event.label.name == 'New Task'
     runs-on: ubuntu-latest
     permissions:
